@@ -9,13 +9,19 @@ header, nav{
     padding: 0px 10px 20px 5px;
     margin: 25px 10px 0px 100px;
 }
+
+header nav{
+    margin-left: 600px;
+    /* position: sticky; */
+}
+
 nav ul li{
     /* Set display, margin, padding, font-size, background-color */
     display: inline;
     width: 300px;
     padding: 20px;
-    margin-left: 100px ;
-    background-color: bisque;
+    /* margin-left: 100px;  */
+    /* background-color: bisque; */
     font-size: 20px;
 }
 
@@ -42,8 +48,10 @@ nav a.current{
 
 h1{
    /*Set font and font size*/
-    font-size: 36px;
-    font-family: 'Merriweather', 'Anton', 'Times New Roman', sans-serif;
+   display: flex;
+   font-size: 36px;
+   font-family: 'Merriweather', 'Anton', 'Times New Roman', sans-serif;
+   justify-content: center;
 }
 
 h2{
