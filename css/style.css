@@ -12,7 +12,6 @@ header, nav{
 
 header nav{
     margin-left: 600px;
-    /* position: sticky; */
 }
 
 nav ul li{
@@ -37,10 +36,12 @@ a:visited{
 
 nav a.current{
     /* Set text decoration, transformation, and underline properties */
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-underline-offset: 8px;
-    text-transform: uppercase;
+    /* text-decoration-line: underline; */
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    background-color:bisque;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
@@ -116,12 +117,6 @@ h1, h2, h3{
      /* Set box shadow */
      box-shadow: 4px 0 10px, -4px 0 10px;
 }
-    
-
-/* p + p { */
-     /* Set indentation */
-     /* text-indent: 20px; */
-/* } */
   
 p{
      /* Set margin */
@@ -136,6 +131,21 @@ p{
     line-height: 1;
     list-style-image: url("../images/sketchbook.png");
     margin: 0 0 10px 10px;
+}
+
+img{
+    width:auto;
+    padding: 5px;
+    margin: 5px;
+    border: 10px black;
+    border: solid;
+    border-radius: 8px;
+}
+
+.grid div img:nth-child(2n):hover{
+    opacity: 0.7;
+    background-color: black;
+    /* display: inherit; */
 }
 
 main > img {
