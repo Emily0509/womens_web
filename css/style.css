@@ -1,42 +1,43 @@
 body{
-   /* Set line spacing */
    line-height: 1.5;
 }
 
-
-header, nav{
-    /* Set padding and margin */
-    padding: 0px 10px 20px 5px;
-    margin: 25px 10px 0px 100px;
+.skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-header nav{
-    margin-left: 400px;
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+header, nav{
+    padding: 0px 10px 20px 5px;
+    margin: 25px 10px 0px 0px;
 }
 
 nav ul li{
-    /* Set display, margin, padding, font-size, background-color */
-    display: inline;
+    display: inline-block;
     width: 300px;
-    padding: 20px;
-    /* margin-left: 100px;  */
-    /* background-color: bisque; */
-    font-size: 20px;
+    font-family: 'Lora', 'Merriweather', serif;
+    font-size: 12px;
 }
 
 nav a{
-    /* Set text decoration*/
     text-decoration: none;
 }
 
 a:visited{
-    /* Set color */
     color: black;
 }
 
 nav a.current{
-    /* Set text decoration, transformation, and underline properties */
-    /* text-decoration-line: underline; */
     display: inline-block;
     border-radius: 5px;
     padding: 5px;
@@ -48,39 +49,36 @@ nav a.current{
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:wght@300;400&display=swap");
 
 h1{
-   /*Set font and font size*/
    display: flex;
-   font-size: 36px;
+   font-size: 20px;
    font-family: 'Merriweather', 'Anton', 'Times New Roman', sans-serif;
    justify-content: center;
 }
 
 h2{
-    /*Set font, font size, and alignment*/
-    font-size: 30px;
+    font-size: 18px;
     font-family: 'Anton', 'Times New Roman', sans-serif;
     text-align: center;
 }
 
 h3{
-    /*Set font size*/
-    font-size: 26px;
+    font-size: 16px;
+    font-family: 'Merriweather', 'Anton', sans-serif;
+    padding: 0 20px;
 }
 
 h1, h2, h3{
-    /*Set margin */
     margin-top: 10px;
-
 }
+
+
 .grid{
-    /*Set width, margin, border properties, background color, and grid properties */
     display: grid;
     width: 90%;
-    margin: 50px;
+    margin: auto;
     border-radius: 10px;
     border: solid;
     background-color: rgb(66, 107, 107);
-    grid-template-columns: 30% 30% 30%;
     column-gap: 60px;
     row-gap: 10px;
     justify-content: center;
@@ -102,7 +100,6 @@ h1, h2, h3{
     margin:auto;
 }
 
-
 .grid div:nth-child(3n+1)  {
     /* Set box shadow */
     box-shadow: 4px 0 10px;
@@ -114,50 +111,198 @@ h1, h2, h3{
 }
 
 .grid div:nth-child(3n+2)  {
-     /* Set box shadow */
-     box-shadow: 4px 0 10px, -4px 0 10px;
+    /* Set box shadow */
+    box-shadow: 4px 0 10px, -4px 0 10px;
 }
-  
+
 p{
-     /* Set margin */
-     margin-top: 10px;
-     padding: 0 20px;
-     font-family: 'Merriweather', 'Anton', sans-serif;
-}
-
-
-.grid ul li{
-    /* Set margin, line-spacing, list styling  */
-    line-height: 1;
-    list-style-image: url("../images/sketchbook.png");
-    margin: 0 0 10px 10px;
-}
-
-img{
-    width:auto;
-    padding: 5px;
-    margin: 5px;
-    border: 10px black;
-    border: solid;
-    border-radius: 8px;
-}
-
-.grid div img:nth-child(2n):hover{
-    opacity: 0.7;
-    background-color: black;
-    /* display: inherit; */
-}
-
-main > img {
-    width: 100%;
-}
-
-h3{
-    font-family: 'Merriweather', 'Anton', sans-serif;
+    /* Set margin */
+    margin-top: 10px;
     padding: 0 20px;
+    font-family: 'Merriweather', 'Anton', sans-serif;
+    font-size: 12px;
 }
+
+@media only screen and (min-width: 800px) {
+    h1{
+        display: flex;
+        font-size: 48px;
+        font-family: 'Merriweather', 'Anton', 'Times New Roman', sans-serif;
+        justify-content: center;
+     }
+     
+     h2{
+         font-size: 36px;
+         font-family: 'Anton', 'Times New Roman', sans-serif;
+         text-align: center;
+     }
+     
+     h3{
+         font-size: 28px;
+         font-family: 'Merriweather', 'Anton', sans-serif;
+         padding: 0 20px;
+     }
+     
+     h1, h2, h3{
+         margin-top: 10px;
+     }
+
+     ul li{
+        font-size: 18px;
+        font-family: 'Merriweather', 'Anton', sans-serif;
+        padding-top: 10px;
+        padding-left: 10px;
+     }
+
+    .grid{
+        /*Set width, margin, border properties, background color, and grid properties */
+        display: grid;
+        width: 90%;
+        margin: 50px;
+        border-radius: 10px;
+        border: solid;
+        background-color: rgb(66, 107, 107);
+        grid-template-columns: 30% 30% 30%;
+        column-gap: 60px;
+        row-gap: 10px;
+        justify-content: center;
+    }
+
+    .grid div{
+        /* Set border properties, padding, and background color */
+        border: solid;
+        background-color: beige;
+        border-radius: 10px;
+        padding: 5px 5px 5px 40px;
+    }
+
+    .grid img{
+        /* Set width, margin, and display */
+        width: 90%;
+        display: block;
+        margin:auto;
+    }
+
+
+    .grid div:nth-child(3n+1)  {
+        /* Set box shadow */
+        box-shadow: 4px 0 10px;
+        }
+
+    .grid div:nth-child(3n)  {
+        /* Set box shadow */
+        box-shadow: -4px 0 10px; 
+    }
+
+    .grid div:nth-child(3n+2)  {
+        /* Set box shadow */
+        box-shadow: 4px 0 10px, -4px 0 10px;
+    }
+    
+    p{
+        /* Set margin */
+        margin-top: 10px;
+        padding: 0 20px;
+        font-family: 'Merriweather', 'Anton', sans-serif;
+        font-size: 18px;
+    }
+
+
+    .grid ul li{
+        /* Set margin, line-spacing, list styling  */
+        line-height: 1;
+        list-style-image: url("../images/sketchbook.png");
+        margin: 0 0 10px 10px;
+    }
+
+    img{
+        width:auto;
+        padding: 5px;
+        margin: 5px;
+        border: 10px black;
+        border: solid;
+        border-radius: 8px;
+    }
+
+    .grid div img:nth-child(2n):hover{
+        opacity: 0.7;
+        background-color: black;
+        /* display: inherit; */
+    }
+
+    main > img {
+        width: 100%;
+    }
+}
+
 
 footer p{
     font-family: 'Merriweather', 'Anton', sans-serif;
     padding: 10px 20px;
+}
+
+.background_page{
+    background-image: url(../images/background.jpg);
+    background-color: #ffffff;
+}
+
+@keyframes change_color{
+    from {
+        background-color: #ffffff;
+        padding-top: 0%;
+    }
+    to {
+        background-color: yellowgreen;
+        padding-top: 100px;
+    }
+}
+
+.thanks{
+    height: 150px;
+    animation-name: change_color;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+    /*Turn off scroll*/
+    html{
+      scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    /*Turn off transition*/
+    a.skip {
+      -webkit-transition: initial; /* sets to default setting */
+      transition: initial; /* sets to default setting */
+    }
+  
+    /*Turn off parallax*/
+    .intro{
+      background-attachment: initial;
+    }
+  }
+
+
+dl {
+    font-family: 'Merriweather', 'Anton', sans-serif;
+    padding: 10px;
+}
+
+dl > dt {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+dl > dd {
+    font-size: 14px;
+    font-style: italic;
+}
+
+dl > dd > p{
+    font-size: 14px;
+    font-style: normal;
+    text-decoration: none;
+    padding: 10px;
 }
